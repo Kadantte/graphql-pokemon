@@ -1369,6 +1369,7 @@ export const abilities = new Collection<string, PokemonTypes.Ability>([
   [
     'pickup',
     {
+      desc: "At the end of each turn, if this Pokémon is not holding an item and at least one adjacent Pokémon used an item during this turn, one of those Pokémon is selected at random and this Pokémon obtains that Pokémon's last used item. An item is not considered the last used if it was a popped Air Balloon, if the item was picked up by another Pokémon with this Ability, or if the item was lost to Bug Bite, Corrosive Gas, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be picked up.",
       isFieldAbility: 'After winning a battle, there is a 10% chance that a Pokémon with Pickup will create a held item for itself, even if fainted.',
       name: 'Pickup',
       shortDesc: 'If this Pokémon has no item, it finds one used by an adjacent Pokémon this turn.'
@@ -2239,9 +2240,9 @@ export const abilities = new Collection<string, PokemonTypes.Ability>([
   [
     'toxicchain',
     {
-      desc: "This Pokémon's moves have a 30% chance of badly poisoning. This effect comes after a move's inherent secondary effect chance.",
+      desc: "This Pokémon's attacks have a 30% chance of badly poisoning. This effect comes before a move's inherent secondary effect chance.",
       name: 'Toxic Chain',
-      shortDesc: "This Pokémon's moves have a 30% chance of badly poisoning."
+      shortDesc: "This Pokémon's attacks have a 30% chance of badly poisoning."
     }
   ],
   [
